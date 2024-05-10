@@ -55,7 +55,10 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     /// <summary>
     /// Ensures all prototypes exist and effects can be applied.
     /// </summary>
-    public void EnsureValid(HumanoidCharacterProfile profile, ICommonSession session, IDependencyCollection collection)
+    public void EnsureValid(
+        ICommonSession session,
+        ICharacterProfile? profile, // Umbra: required for personal items
+        IDependencyCollection collection)
     {
         var groupRemove = new ValueList<string>();
         var protoManager = collection.Resolve<IPrototypeManager>();
@@ -141,7 +144,8 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                 }
 
                 // Validate the loadout can be applied (e.g. points).
-                if (!IsValid(profile, session, loadout.Prototype, collection, out _))
+                // Umbra: pass character profile
+                if (!IsValid(session, loadout.Prototype, profile, collection, out _))
                 {
                     loadouts.RemoveAt(i);
                     continue;
@@ -255,7 +259,12 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     /// <summary>
     /// Returns whether a loadout is valid or not.
     /// </summary>
-    public bool IsValid(HumanoidCharacterProfile profile, ICommonSession? session, ProtoId<LoadoutPrototype> loadout, IDependencyCollection collection, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool IsValid(
+        ICommonSession session,
+        ProtoId<LoadoutPrototype> loadout,
+        ICharacterProfile? profile, // Umbra: required for personal items
+        IDependencyCollection collection,
+        [NotNullWhen(false)] out FormattedMessage? reason)
     {
         reason = null;
 
@@ -278,7 +287,8 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
 
         foreach (var effect in loadoutProto.Effects)
         {
-            valid = valid && effect.Validate(profile, this, session, collection, out reason);
+            // Umbra: pass character profile
+            valid = valid && effect.Validate(this, session, profile, collection, out reason);
         }
 
         return valid;
