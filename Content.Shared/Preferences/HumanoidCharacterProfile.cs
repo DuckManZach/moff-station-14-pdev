@@ -76,7 +76,7 @@ namespace Content.Shared.Preferences
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
         /// </summary>
         [DataField]
-        public ProtoId<SpeciesPrototype> Species { get; set; } = SharedHumanoidAppearanceSystem.DefaultSpecies;
+        public string Species { get; set; } = SharedHumanoidAppearanceSystem.DefaultSpecies;
 
         [DataField]
         public int Age { get; set; } = 18;
@@ -126,6 +126,12 @@ namespace Content.Shared.Preferences
         public PreferenceUnavailableMode PreferenceUnavailable { get; private set; } =
             PreferenceUnavailableMode.SpawnAsOverflow;
 
+        [DataField("cosmaticDriftCharacterHeight")]
+        public float Height = 1f;
+
+        [DataField("cosmaticDriftCharacterRecords")]
+        public CharacterRecords? CDCharacterRecords;
+
         public HumanoidCharacterProfile(
             string name,
             string flavortext,
@@ -137,9 +143,10 @@ namespace Content.Shared.Preferences
             SpawnPriorityPreference spawnPriority,
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
             PreferenceUnavailableMode preferenceUnavailable,
-            HashSet<ProtoId<AntagPrototype>> antagPreferences,
-            HashSet<ProtoId<TraitPrototype>> traitPreferences,
-            Dictionary<string, RoleLoadout> loadouts)
+            HashSet<string> antagPreferences,
+            HashSet<string> traitPreferences,
+            Dictionary<string, RoleLoadout> loadouts,
+            CharacterRecords? cdCharacterRecords)
         {
             Name = name;
             FlavorText = flavortext;
@@ -182,9 +189,10 @@ namespace Content.Shared.Preferences
                 other.SpawnPriority,
                 new Dictionary<ProtoId<JobPrototype>, JobPriority>(other.JobPriorities),
                 other.PreferenceUnavailable,
-                new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
-                new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
-                new Dictionary<string, RoleLoadout>(other.Loadouts))
+                new HashSet<string>(other.AntagPreferences),
+                new HashSet<string>(other.TraitPreferences),
+                new Dictionary<string, RoleLoadout>(other.Loadouts),
+                other.CDCharacterRecords)
         {
         }
 
@@ -616,7 +624,16 @@ namespace Content.Shared.Preferences
             _antagPreferences.UnionWith(antags);
 
             _traitPreferences.Clear();
-            _traitPreferences.UnionWith(GetValidTraits(traits, prototypeManager));
+            _traitPreferences.UnionWith(traits);
+
+            if (CDCharacterRecords == null)
+            {
+                CDCharacterRecords = CharacterRecords.DefaultRecords();
+            }
+            else
+            {
+                CDCharacterRecords!.EnsureValid();
+            }
 
             // Checks prototypes exist for all loadouts and dump / set to default if not.
             var toRemove = new ValueList<string>();
