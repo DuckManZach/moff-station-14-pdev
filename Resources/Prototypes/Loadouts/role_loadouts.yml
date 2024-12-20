@@ -9,6 +9,10 @@
   - CaptainOuterClothing
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -23,7 +27,17 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
   - PersonalItemsJobAgnostic # Umbra
+=======
+  - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
+
+# Silicons
+- type: roleLoadout
+  id: JobStationAi
+  nameDataset: NamesAI
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
 
 # Civilian
 - type: roleLoadout
@@ -40,6 +54,10 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -53,6 +71,10 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -78,6 +100,10 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -89,6 +115,10 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -101,6 +131,10 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -116,6 +150,10 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -130,6 +168,11 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - JanitorPlunger
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -200,6 +243,10 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -251,6 +298,10 @@
   - StationEngineerBackpack
   - SurvivalExtended
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -277,6 +328,10 @@
   - AtmosphericTechnicianShoes
   - SurvivalExtended
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 # Science
@@ -337,6 +392,11 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+<<<<<<< HEAD
+=======
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -350,7 +410,13 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+<<<<<<< HEAD
   - PersonalItemsWarden # Umbra
+=======
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
+  - PersonalItemsJobAgnostic # Umbra
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
 
 - type: roleLoadout
   id: JobSecurityOfficer
@@ -364,6 +430,11 @@
   - SecurityBelt
   - SurvivalSecurity
   - Trinkets
+<<<<<<< HEAD
+=======
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -377,7 +448,13 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+<<<<<<< HEAD
   - PersonalItemsDetective # Umbra
+=======
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
+  - PersonalItemsJobAgnostic # Umbra
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
 
 - type: roleLoadout
   id: JobSecurityCadet
@@ -404,6 +481,10 @@
   - Glasses
   - SurvivalMedical
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathToolMedical
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
@@ -462,6 +543,10 @@
   - Glasses
   - SurvivalMedical
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathToolMedical
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 # Wildcards
@@ -484,6 +569,10 @@
   - Glasses
   - Survival
   - Trinkets
+<<<<<<< HEAD
+=======
+  - GroupSpeciesBreathTool
+>>>>>>> 57b7a0f10e (Personal Item Fixes - Wave 2 (#244))
   - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
